@@ -1,8 +1,20 @@
-import type {Metadata} from "next"; import {Cta,PageHero,Placeholder} from "@/components/UI";
-export const metadata:Metadata={title:"Project Experience"};
-const projects=[
-  {title:"Commercial Renovations",desc:"Delivering efficient, functional spaces for businesses and teams.",image:"Commercial Interior",location:"Vancouver, BC",scope:"Interior improvements, trade coordination, tenant-ready upgrades",focus:"Schedule, communication, finish quality"},
-  {title:"Facility Upgrades",desc:"Supporting facilities that need to keep operations moving.",image:"Facility Upgrade",location:"Calgary, AB",scope:"Building improvements, phased work, coordination support",focus:"Access, safety, minimal disruption"},
-  {title:"Community-Focused Spaces",desc:"Building spaces that serve people and strengthen communities.",image:"Community-Focused Space",location:"Kelowna, BC",scope:"Renovation, site coordination, project closeout",focus:"User experience, efficiency, accountability"},
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Cta, PageHero } from "@/components/UI";
+
+export const metadata: Metadata = { title: "Project Experience" };
+
+const projects = [
+  { number: "01", title: "Commercial Interiors", subtitle: "Spaces shaped around people, operations, and detail.", image: "https://images.pexels.com/photos/22725910/pexels-photo-22725910.jpeg?auto=compress&cs=tinysrgb&w=1800", scope: "General Contracting · Project Management", priorities: ["Trade coordination", "Schedule control", "Finish quality"] },
+  { number: "02", title: "Facility Upgrades", subtitle: "Improvement work planned around active environments.", image: "https://images.pexels.com/photos/7534179/pexels-photo-7534179.jpeg?auto=compress&cs=tinysrgb&w=1600", scope: "Phased Renovation · Site Coordination", priorities: ["Safe access", "Minimal disruption", "Clear communication"] },
+  { number: "03", title: "Community-Focused Spaces", subtitle: "Practical, durable spaces designed to serve people well.", image: "https://images.pexels.com/photos/19037688/pexels-photo-19037688.jpeg?auto=compress&cs=tinysrgb&w=1600", scope: "Renovation · Construction Management", priorities: ["User experience", "Efficient delivery", "Responsible closeout"] },
 ];
-export default function Projects(){return <><PageHero eyebrow="PROJECTS / EXPERIENCE" title="Project Experience">Selected experience across active, commercial, and community-focused environments.</PageHero><section className="section"><div className="shell project-intro"><p>Our work is organized around the environments we support and the delivery priorities that matter in each one.</p></div><div className="shell project-grid">{projects.map((p,i)=><article key={p.title}><Placeholder label={p.image}/><span>0{i+1}</span><h2>{p.title}</h2><p>{p.desc}</p><dl><div><dt>Location</dt><dd>{p.location}</dd></div><div><dt>Scope</dt><dd>{p.scope}</dd></div><div><dt>Focus</dt><dd>{p.focus}</dd></div></dl></article>)}</div><p className="shell photo-note">Photography is representative and does not depict the listed projects.</p></section><Cta/></>}
+
+export default function Projects() { return <>
+  <PageHero eyebrow="02 / PROJECT EXPERIENCE" title="Work Defined by How It’s Delivered">Selected project environments that reflect TMC’s focus: clear planning, coordinated execution, and accountable delivery.</PageHero>
+  <section className="section projects-editorial"><div className="shell project-editorial-list">{projects.map((project, index) => <article className={index % 2 ? "project-story reverse" : "project-story"} key={project.title}>
+    <div className="project-story-image"><Image src={project.image} alt={`${project.title} representative environment`} fill sizes="(max-width: 900px) 100vw, 62vw" unoptimized /><span>PROJECT ENVIRONMENT / {project.number}</span></div>
+    <div className="project-story-copy"><small>{project.number} / EXPERIENCE</small><h2>{project.title}</h2><p>{project.subtitle}</p><dl><div><dt>Scope</dt><dd>{project.scope}</dd></div><div><dt>Priorities</dt><dd>{project.priorities.join(" · ")}</dd></div></dl></div>
+  </article>)}</div><p className="shell photo-note">Photography is representative and does not depict completed TMC projects. Project-specific metrics can be added as verified information becomes available.</p></section>
+  <Cta />
+</>; }
