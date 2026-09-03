@@ -2,12 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const services = [
-  {n:"01", t:"General Contracting", d:"End-to-end construction delivery with clear site leadership and accountable execution."},
-  {n:"02", t:"Construction Management", d:"Professional oversight for cost, schedule, quality, trades, and communication."},
-  {n:"03", t:"Project Management", d:"Organized planning, coordination, reporting, and support from start to finish."},
-  {n:"04", t:"Preconstruction Support", d:"Early review of scope, budget, constructability, schedule, and site needs."},
-  {n:"05", t:"Site Coordination", d:"Daily coordination of trades, deliveries, safety, access, and progress."},
-  {n:"06", t:"Renovations & Upgrades", d:"Carefully planned improvements for existing and active spaces."},
+  {n:"01", t:"New Build & Full Conversions", d:"Design-build and high-rise commercial-to-residential conversions."},
+  {n:"02", t:"Mechanical", d:"Full plumbing, sheet metal, and complete HVAC systems."},
+  {n:"03", t:"Electrical", d:"Commercial and industrial installations, upgrades, and maintenance."},
+  {n:"04", t:"Interior Systems", d:"Steel studs, drywall, flooring, painting, ceilings, and modular systems."},
+  {n:"05", t:"Structural Steel", d:"CWB-certified fabrication and onsite structural steel erection."},
 ];
 export const advantages = [
   ["Right-Sized Team", "Professional enough for structured projects. Focused enough to stay responsive."],

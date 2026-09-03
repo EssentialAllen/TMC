@@ -6,7 +6,10 @@ const nextConfig: NextConfig = {
   basePath: process.env.PAGES_BASE_PATH || "",
   images: {
     unoptimized: true,
-    remotePatterns: [{ protocol: "https", hostname: "images.pexels.com" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "images.pexels.com" },
+      { protocol: "https", hostname: "static.wixstatic.com" },
+    ],
   },
 };
 

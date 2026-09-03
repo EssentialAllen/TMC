@@ -1,4 +1,22 @@
-import type {Metadata} from "next"; import {Cta,PageHero} from "@/components/UI";
-export const metadata:Metadata={title:"Services"};
-const items=[["01","General Contracting","End-to-end construction delivery with clear coordination, site management, and accountable execution.",["Trade coordination","Site supervision","Schedule management","Quality control","Safety awareness","Project closeout"]],["02","Construction Management","Professional construction oversight to help clients manage cost, schedule, quality, trades, and communication.",["Project planning","Budget and schedule coordination","Consultant and trade alignment","Value review","Construction oversight","Reporting and documentation"]],["03","Project Management","Planning, coordination, reporting, and project support from start to finish.",["Scope coordination","Project communication","Schedule tracking","Meeting coordination","Decision tracking","Closeout support"]],["04","Preconstruction Support","Early review of scope, budget, constructability, schedule, and site needs.",["Scope review","Budget review","Site conditions","Constructability review","Risk identification","Planning support"]],["05","Site Coordination","Daily coordination of trades, deliveries, safety, access, and progress.",["Site access","Trade sequencing","Deliveries","Safety coordination","Daily communication","Progress updates"]],["06","Renovations & Upgrades","Improving existing spaces through careful planning and minimal disruption.",["Interior improvements","Facility upgrades","Tenant improvements","Phased renovations","Occupied-space coordination","Finish quality"]]] as const;
-export default function Services(){return <><PageHero eyebrow="OUR SERVICES" title="Construction Services That Keep Projects Moving">From early planning through closeout, TMC brings structure, practical coordination, and direct accountability to every stage.</PageHero><section className="section"><div className="shell service-rows">{items.map(x=><article key={x[0]}><span className="service-num">{x[0]}</span><div><h2>{x[1]}</h2><p>{x[2]}</p></div><ul>{x[3].map(y=><li key={y}>{y}</li>)}</ul></article>)}</div></section><Cta/></>}
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Cta, PageHero } from "@/components/UI";
+
+export const metadata: Metadata = { title: "Services" };
+
+const services = [
+  { number: "01", name: "New Build & Full Conversions", description: "Design-build of new commercial and residential buildings, and conversions of high-rises from commercial to residential.", image: "/projects/avia-ng-base-building.jpg" },
+  { number: "02", name: "Mechanical", description: "Full plumbing and sheet metal work, including complete HVAC systems for commercial and industrial facilities.", image: "/projects/the-nest.jpg" },
+  { number: "03", name: "Electrical", description: "Comprehensive commercial and industrial electrical installations, upgrades, and maintenance.", image: "https://images.pexels.com/photos/11288399/pexels-photo-11288399.jpeg?auto=compress&cs=tinysrgb&w=1600" },
+  { number: "04", name: "Interior Systems", description: "Supply and installation of steel studs, drywall (mud, tape, sand), flooring, painting, T-bar ceilings, and pre-engineered panels or modular systems.", image: "https://images.pexels.com/photos/5511091/pexels-photo-5511091.jpeg?auto=compress&cs=tinysrgb&w=1600" },
+  { number: "05", name: "Structural Steel", description: "CWB-certified fabrication in our 12,000 sq. ft. facility, with in-house ironworkers for onsite erection of structural steel components.", image: "/projects/emf-headquarters.jpg" },
+] as const;
+
+export default function Services() { return <>
+  <PageHero eyebrow="03 / OUR SERVICES" title="Built to Deliver More In-House">Integrated construction capabilities help streamline coordination, strengthen quality control, and keep complex projects moving.</PageHero>
+  <section className="pdf-services"><div className="shell">{services.map((service, index) => <article className={`pdf-service ${index % 2 ? "reverse" : ""}`} key={service.name}>
+    <div className="pdf-service-image"><Image src={service.image} alt={`${service.name} capability`} fill sizes="(max-width: 900px) 100vw, 46vw" /></div>
+    <div className="pdf-service-copy"><span>{service.number}</span><h2>{service.name}</h2><p>{service.description}</p></div>
+  </article>)}</div></section>
+  <Cta />
+</>; }
