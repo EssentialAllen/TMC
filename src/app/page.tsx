@@ -4,14 +4,16 @@ import { Eyebrow } from "@/components/UI";
 import { ServiceExplorer } from "@/components/ServiceExplorer";
 
 const featured = [
-  { number: "01", name: "The Nest", location: "Yellowknife, NT", value: "$8.5M", image: "/projects/the-nest.jpg", alt: "Mechanical systems at The Nest" },
+  { number: "01", name: "The Nest", location: "Yellowknife, NT", value: "$8.5M", image: "/projects/the-nest-exterior.jpg", alt: "Exterior of The Nest residential conversion in Yellowknife" },
   { number: "02", name: "Base Building & Tenant Fit-Out", location: "Calgary, AB", value: "$2.45M", image: "/projects/avia-ng-base-building.jpg", alt: "Avia NG office and laboratory building" },
   { number: "03", name: "EMF Headquarters Build Out", location: "Calgary, AB", value: "$4.9M", image: "/projects/emf-headquarters.jpg", alt: "EMF headquarters commercial building" },
 ] as const;
 
 export default function Home() { return <>
   <section className="editorial-hero">
-    <Image src="/projects/avia-ng-base-building.jpg" alt="Completed commercial building reflecting TMC project experience" fill priority sizes="100vw" />
+    <video className="hero-video" autoPlay muted loop playsInline preload="metadata" poster="/projects/avia-ng-base-building.jpg" aria-hidden="true">
+      <source src="/hero-construction.mp4" type="video/mp4" />
+    </video>
     <div className="hero-shade" />
     <div className="shell editorial-hero-copy"><Eyebrow>TMC PROJECTS / GENERAL CONTRACTING + PROJECT MANAGEMENT</Eyebrow><h1>Building Better.<br />Managing Smarter.</h1><p>The right-sized construction partner for projects that need clarity, coordination, and accountability.</p><div className="actions"><Link href="/contact" className="button button-light">Start a Project <span aria-hidden>→</span></Link><Link href="/projects" className="hero-link">View Our Work <span aria-hidden>↗</span></Link></div></div>
   </section>

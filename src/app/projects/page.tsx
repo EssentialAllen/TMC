@@ -14,8 +14,8 @@ const featured = [
     client: "Borealis Development",
     location: "Yellowknife, NT",
     value: "$8.5M",
-    image: "/projects/the-nest.jpg",
-    alt: "Mechanical systems at The Nest in Yellowknife",
+    image: "/projects/the-nest-exterior.jpg",
+    alt: "Exterior of The Nest residential conversion in Yellowknife",
     scope: "EMF successfully completed the full mechanical and electrical scope for a commercial-to-residential conversion project. Our team managed the transition of building systems to meet residential standards, including upgrades to HVAC, plumbing, power distribution, and lighting. The result was a seamless transformation that delivered efficient, reliable systems tailored for a highrise and residential living.",
   },
   {
@@ -45,7 +45,7 @@ const groups = [
     title: "Commercial Fit-Outs",
     projects: [
       { client: "First Aid Training Calgary", location: "Calgary, AB", value: "$285K", image: "https://images.pexels.com/photos/37277086/pexels-photo-37277086/free-photo-of-cpr-training-session-in-classroom-setting.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "CPR training equipment in a real classroom setting", scope: "Build out of classrooms, training spaces, and offices, with careful attention to layout and finishes to support both learning and day-to-day operations." },
-      { client: "EMF", location: "Calgary, AB", value: "$610K", image: "https://static.wixstatic.com/media/b432b1_0df4253687164f22841edbe99172367d~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85/b432b1_0df4253687164f22841edbe99172367d~mv2.jpg", alt: "EMF Contracting organization photograph", scope: "Design-build of our own office with a focus on clean, modern aesthetics and functionality." },
+      { client: "EMF", location: "Calgary, AB", value: "$610K", image: "/projects/emf-headquarters.jpg", alt: "EMF office and headquarters building in Calgary", scope: "Design-build of our own office with a focus on clean, modern aesthetics and functionality." },
       { client: "Calgary Board of Education", location: "Calgary, AB", value: "$1.4M", image: "https://images.pexels.com/photos/19037688/pexels-photo-19037688.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "Real modern classroom interior with desks and chairs", scope: "Full renovation of a classroom at Sir John Franklin. We upgraded the layout, finishes, and building systems to create a brighter, more functional learning environment." },
       { client: "Little Hands Montessori Academy", location: "Calgary area, AB", value: "$270K", image: "https://images.pexels.com/photos/8923952/pexels-photo-8923952.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "Close-up of educational toys arranged on classroom shelves", scope: "Fit-out of a daycare facility, creating safe, functional, and engaging spaces for children." },
       { client: "Calgary Board of Education", location: "Calgary, AB", value: "$735K", image: "https://images.pexels.com/photos/5905441/pexels-photo-5905441.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "Close-up of a classroom desk, stationery, and whiteboard", scope: "Redevelopment of multiple classrooms, consisting of all trades, and also included selective building envelope upgrades." },
@@ -62,6 +62,13 @@ const groups = [
       { client: "Aspen Springs Pharmacy", location: "Calgary, AB", value: "$735K", image: "https://images.pexels.com/photos/26834971/pexels-photo-26834971.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "Real professional consultation room with modern finishes", scope: "4,000 sq. ft. medical clinic featuring a pharmacy storefront, two medical exam rooms, and two testing rooms." },
     ],
   },
+  {
+    title: "Restaurants",
+    projects: [
+      { client: "Desi Bistro Indian Cuisine & Bar", location: "Calgary, AB", value: "", image: "https://static.wixstatic.com/media/b432b1_f0c817289dbe43b096eea65ae57a11f0~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/b432b1_f0c817289dbe43b096eea65ae57a11f0~mv2.jpg", alt: "Desi Bistro Indian Cuisine and Bar interior", scope: "Restaurant project featured in the EMF portfolio, with a polished dining environment and coordinated interior finishes." },
+      { client: "Bussin’ Burger", location: "Calgary, AB", value: "", image: "https://static.wixstatic.com/media/b432b1_b904c1b8895d411fbf1c71f468ac3e7d~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/b432b1_b904c1b8895d411fbf1c71f468ac3e7d~mv2.jpg", alt: "Bussin Burger restaurant interior", scope: "Restaurant project featured in the EMF portfolio, designed around an efficient service environment and a distinct customer-facing finish." },
+    ],
+  },
 ] as const;
 
 export default function Projects() { return <>
@@ -72,6 +79,6 @@ export default function Projects() { return <>
     <div className="featured-project-copy"><p className="project-kicker">{project.location}</p><h2>{project.name}</h2><p className="project-client">for {project.client}</p><p className="project-scope">{project.scope}</p><dl><div><dt>Project value</dt><dd>{project.value}</dd></div><div><dt>Location</dt><dd>{project.location}</dd></div></dl></div>
   </article>)}</div></section>
 
-  <section className="project-archive"><div className="shell"><div className="section-marker light">PROJECT ARCHIVE / 11 PROJECTS</div>{groups.map((group, groupIndex) => <section className="archive-group" key={group.title}><header><span>0{groupIndex + 1}</span><h2>{group.title}</h2><p>{group.projects.length} projects</p></header><div className="archive-grid">{group.projects.map((project, index) => <article className="archive-card archive-card-photo" key={`${project.client}-${index}`}><div className="archive-thumb"><Image src={project.image} alt={project.alt} fill sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" /></div><div className="archive-card-body"><div className="archive-card-top"><span>{String(index + 1).padStart(2, "0")}</span><strong>{project.value}</strong></div><h3>{project.client}</h3><p>{project.scope}</p><div className="archive-card-foot">{project.location}</div></div></article>)}</div></section>)}</div></section>
+  <section className="project-archive"><div className="shell"><div className="section-marker light">PROJECT ARCHIVE / 13 PROJECTS</div>{groups.map((group, groupIndex) => <section className="archive-group" key={group.title}><header><span>0{groupIndex + 1}</span><h2>{group.title}</h2></header><div className="archive-grid">{group.projects.map((project, index) => <article className="archive-card archive-card-photo" key={`${project.client}-${index}`}><div className="archive-thumb"><Image src={project.image} alt={project.alt} fill sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" /></div><div className="archive-card-body"><div className="archive-card-top"><span>{String(index + 1).padStart(2, "0")}</span>{project.value && <strong>{project.value}</strong>}</div><h3>{project.client}</h3><p>{project.scope}</p><div className="archive-card-foot">{project.location}</div></div></article>)}</div></section>)}</div></section>
   <Cta />
 </>; }
