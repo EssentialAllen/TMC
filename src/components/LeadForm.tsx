@@ -13,7 +13,7 @@ export function LeadForm() {
     <input type="hidden" name="lead_source" value={source}/><input type="hidden" name="lead_campaign" value={campaign}/>
     <div className="honeypot" aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off"/></label></div>
     <div className="form-grid"><Field label="Name" name="name" required/><Field label="Email" name="email" type="email" required/><Field label="Phone" name="phone" type="tel"/><label className="full">Message <textarea name="message" rows={7} required placeholder="Tell us about your project, location, timing, or what you need help with."/></label></div>
-    <div className="form-footer"><p>Required fields are marked with an asterisk (*).</p><button className="button" type="submit">Prepare Email<span aria-hidden>↗</span></button></div>
+    <div className="form-footer"><p>Required fields are marked with an asterisk (*).</p><button className="button" type="submit">Prepare Email<span aria-hidden>→</span></button></div>
   </form>
 }
 function Field({label,name,type="text",required=false}:{label:string,name:string,type?:string,required?:boolean}){return <label>{label}{required&&" *"}<input name={name} type={type} required={required}/></label>}

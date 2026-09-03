@@ -4,7 +4,7 @@ import { Cta, Eyebrow } from "@/components/UI";
 
 export const metadata: Metadata = {
   title: "Project Portfolio",
-  description: "Selected legacy project experience associated with TMC leadership across major conversions, commercial fit-outs, and specialized clinics.",
+  description: "Selected project experience from our team across major conversions, commercial fit-outs, restaurants, and specialized clinics.",
 };
 
 const featured = [
@@ -16,7 +16,7 @@ const featured = [
     value: "$8.5M",
     image: "/projects/the-nest-exterior.jpg",
     alt: "Exterior of The Nest residential conversion in Yellowknife",
-    scope: "EMF successfully completed the full mechanical and electrical scope for a commercial-to-residential conversion project. Our team managed the transition of building systems to meet residential standards, including upgrades to HVAC, plumbing, power distribution, and lighting. The result was a seamless transformation that delivered efficient, reliable systems tailored for a highrise and residential living.",
+    scope: "Our team successfully completed the full mechanical and electrical scope for a commercial-to-residential conversion project. We managed the transition of building systems to meet residential standards, including upgrades to HVAC, plumbing, power distribution, and lighting. The result was a seamless transformation that delivered efficient, reliable systems tailored for high-rise residential living.",
   },
   {
     number: "02",
@@ -26,17 +26,17 @@ const featured = [
     value: "$2.45M",
     image: "/projects/avia-ng-base-building.jpg",
     alt: "Avia NG offices and laboratory building in Calgary",
-    scope: "EMF acted as General Contractor for the construction of 8,000 sq. ft. of new offices and laboratory space for Avia NG. The project included full interior fit-out, with the integration of DIRTT paneling systems to deliver a modern, flexible, and efficient work environment.",
+    scope: "Our team acted as General Contractor for the construction of 8,000 sq. ft. of new offices and laboratory space for Avia NG. The project included a full interior fit-out and the integration of DIRTT panel systems to deliver a modern, flexible, and efficient work environment.",
   },
   {
     number: "03",
-    name: "EMF Headquarters Build Out",
-    client: "EMF Contracting & Gracon Holdings",
+    name: "Headquarters Build Out",
+    client: "Gracon Holdings",
     location: "Calgary, AB",
     value: "$4.9M",
-    image: "/projects/emf-headquarters.jpg",
-    alt: "EMF headquarters commercial building in Calgary",
-    scope: "EMF acted as General Contractor for a new 18,000 sq. ft. commercial building. EMF purchased a 2.5 acres lots back in 2019 and design-built his head office. The whole building was completed in 10 months.",
+    image: "/projects/gracon-headquarters.jpg",
+    alt: "Gracon Holdings headquarters building in Calgary",
+    scope: "Our team acted as General Contractor for a new 18,000 sq. ft. commercial building. The 2.5-acre site was acquired in 2019 and the headquarters was delivered through a design-build approach in 10 months.",
   },
 ] as const;
 
@@ -45,7 +45,7 @@ const groups = [
     title: "Commercial Fit-Outs",
     projects: [
       { client: "First Aid Training Calgary", location: "Calgary, AB", value: "$285K", image: "https://images.pexels.com/photos/37277086/pexels-photo-37277086/free-photo-of-cpr-training-session-in-classroom-setting.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "CPR training equipment in a real classroom setting", scope: "Build out of classrooms, training spaces, and offices, with careful attention to layout and finishes to support both learning and day-to-day operations." },
-      { client: "EMF", location: "Calgary, AB", value: "$610K", image: "/projects/emf-headquarters.jpg", alt: "EMF office and headquarters building in Calgary", scope: "Design-build of our own office with a focus on clean, modern aesthetics and functionality." },
+      { client: "Headquarters Office for Gracon Holdings", location: "Calgary, AB", value: "$610K", image: "https://images.pexels.com/photos/5511091/pexels-photo-5511091.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "Professional modern office interior", scope: "Design-build of a headquarters office with a focus on clean, modern aesthetics and day-to-day functionality." },
       { client: "Calgary Board of Education", location: "Calgary, AB", value: "$1.4M", image: "https://images.pexels.com/photos/19037688/pexels-photo-19037688.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "Real modern classroom interior with desks and chairs", scope: "Full renovation of a classroom at Sir John Franklin. We upgraded the layout, finishes, and building systems to create a brighter, more functional learning environment." },
       { client: "Little Hands Montessori Academy", location: "Calgary area, AB", value: "$270K", image: "https://images.pexels.com/photos/8923952/pexels-photo-8923952.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "Close-up of educational toys arranged on classroom shelves", scope: "Fit-out of a daycare facility, creating safe, functional, and engaging spaces for children." },
       { client: "Calgary Board of Education", location: "Calgary, AB", value: "$735K", image: "https://images.pexels.com/photos/5905441/pexels-photo-5905441.jpeg?auto=compress&cs=tinysrgb&w=1200", alt: "Close-up of a classroom desk, stationery, and whiteboard", scope: "Redevelopment of multiple classrooms, consisting of all trades, and also included selective building envelope upgrades." },
@@ -65,14 +65,14 @@ const groups = [
   {
     title: "Restaurants",
     projects: [
-      { client: "Desi Bistro Indian Cuisine & Bar", location: "Calgary, AB", value: "", image: "https://static.wixstatic.com/media/b432b1_f0c817289dbe43b096eea65ae57a11f0~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/b432b1_f0c817289dbe43b096eea65ae57a11f0~mv2.jpg", alt: "Desi Bistro Indian Cuisine and Bar interior", scope: "Restaurant project featured in the EMF portfolio, with a polished dining environment and coordinated interior finishes." },
-      { client: "Bussin’ Burger", location: "Calgary, AB", value: "", image: "https://static.wixstatic.com/media/b432b1_b904c1b8895d411fbf1c71f468ac3e7d~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/b432b1_b904c1b8895d411fbf1c71f468ac3e7d~mv2.jpg", alt: "Bussin Burger restaurant interior", scope: "Restaurant project featured in the EMF portfolio, designed around an efficient service environment and a distinct customer-facing finish." },
+      { client: "Desi Bistro Indian Cuisine & Bar", location: "Calgary, AB", value: "", image: "https://static.wixstatic.com/media/b432b1_f0c817289dbe43b096eea65ae57a11f0~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/b432b1_f0c817289dbe43b096eea65ae57a11f0~mv2.jpg", alt: "Desi Bistro Indian Cuisine and Bar interior", scope: "A restaurant project delivered by our team, with a polished dining environment and coordinated interior finishes." },
+      { client: "Bussin’ Burger", location: "Calgary, AB", value: "", image: "https://static.wixstatic.com/media/b432b1_b904c1b8895d411fbf1c71f468ac3e7d~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/b432b1_b904c1b8895d411fbf1c71f468ac3e7d~mv2.jpg", alt: "Bussin Burger restaurant interior", scope: "A restaurant project delivered by our team, designed around an efficient service environment and a distinct customer-facing finish." },
     ],
   },
 ] as const;
 
 export default function Projects() { return <>
-  <section className="portfolio-hero"><div className="shell"><Eyebrow>02 / PROJECT PORTFOLIO</Eyebrow><h1>Experience built<br />across complex projects.</h1><div className="portfolio-intro"><p>Selected legacy work delivered under EMF Contracting, a company previously owned and led by TMC’s owner.</p><p>This portfolio demonstrates experience in general contracting, conversions, mechanical systems, commercial fit-outs, and specialized facilities.</p></div></div></section>
+  <section className="portfolio-hero"><div className="shell"><Eyebrow>02 / PROJECT PORTFOLIO</Eyebrow><h1>Experience built<br />across complex projects.</h1><div className="portfolio-intro"><p>Selected work delivered by members of our team across a range of complex project types.</p><p>This portfolio demonstrates experience in general contracting, conversions, mechanical systems, commercial fit-outs, and specialized facilities.</p></div></div></section>
 
   <section className="featured-portfolio"><div className="shell"><div className="section-marker">FEATURED / TROPHY PROJECTS</div>{featured.map((project, index) => <article className={`featured-project ${index % 2 ? "reverse" : ""}`} key={project.name}>
     <div className="featured-project-image"><Image src={project.image} alt={project.alt} fill sizes="(max-width: 900px) 100vw, 62vw" priority={index === 0} /><span>{project.number} / FEATURED</span></div>

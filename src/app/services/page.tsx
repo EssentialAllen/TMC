@@ -9,7 +9,7 @@ const services = [
   { number: "02", name: "Mechanical", description: "Full plumbing and sheet metal work, including complete HVAC systems for commercial and industrial facilities.", image: "/projects/the-nest.jpg" },
   { number: "03", name: "Electrical", description: "Comprehensive commercial and industrial electrical installations, upgrades, and maintenance.", image: "https://images.pexels.com/photos/11288399/pexels-photo-11288399.jpeg?auto=compress&cs=tinysrgb&w=1600" },
   { number: "04", name: "Interior Systems", description: "Supply and installation of steel studs, drywall (mud, tape, sand), flooring, painting, T-bar ceilings, and pre-engineered panels or modular systems.", image: "https://images.pexels.com/photos/5511091/pexels-photo-5511091.jpeg?auto=compress&cs=tinysrgb&w=1600" },
-  { number: "05", name: "Structural Steel", description: "CWB-certified fabrication in our 12,000 sq. ft. facility, with in-house ironworkers for onsite erection of structural steel components.", image: "/projects/emf-headquarters.jpg" },
+  { number: "05", name: "Structural Steel", description: "Structural steel fabrication in our 12,000 sq. ft. facility, with in-house ironworkers for onsite erection of structural steel components.", image: "/projects/gracon-headquarters.jpg" },
 ] as const;
 
 export default function Services() { return <>

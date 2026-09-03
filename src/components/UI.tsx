@@ -6,7 +6,7 @@ export const services = [
   {n:"02", t:"Mechanical", d:"Full plumbing, sheet metal, and complete HVAC systems."},
   {n:"03", t:"Electrical", d:"Commercial and industrial installations, upgrades, and maintenance."},
   {n:"04", t:"Interior Systems", d:"Steel studs, drywall, flooring, painting, ceilings, and modular systems."},
-  {n:"05", t:"Structural Steel", d:"CWB-certified fabrication and onsite structural steel erection."},
+  {n:"05", t:"Structural Steel", d:"Structural steel fabrication and onsite erection."},
 ];
 export const advantages = [
   ["Right-Sized Team", "Professional enough for structured projects. Focused enough to stay responsive."],

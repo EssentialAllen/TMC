@@ -2,20 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { Eyebrow } from "@/components/UI";
 import { ServiceExplorer } from "@/components/ServiceExplorer";
+import { HeroVideo } from "@/components/HeroVideo";
 
 const featured = [
   { number: "01", name: "The Nest", location: "Yellowknife, NT", value: "$8.5M", image: "/projects/the-nest-exterior.jpg", alt: "Exterior of The Nest residential conversion in Yellowknife" },
   { number: "02", name: "Base Building & Tenant Fit-Out", location: "Calgary, AB", value: "$2.45M", image: "/projects/avia-ng-base-building.jpg", alt: "Avia NG office and laboratory building" },
-  { number: "03", name: "EMF Headquarters Build Out", location: "Calgary, AB", value: "$4.9M", image: "/projects/emf-headquarters.jpg", alt: "EMF headquarters commercial building" },
+  { number: "03", name: "Headquarters Build Out", location: "Calgary, AB", value: "$4.9M", image: "/projects/gracon-headquarters.jpg", alt: "Gracon Holdings headquarters building" },
 ] as const;
 
 export default function Home() { return <>
   <section className="editorial-hero">
-    <video className="hero-video" autoPlay muted loop playsInline preload="metadata" poster="/projects/avia-ng-base-building.jpg" aria-hidden="true">
-      <source src="/hero-construction.mp4" type="video/mp4" />
-    </video>
+    <HeroVideo />
     <div className="hero-shade" />
-    <div className="shell editorial-hero-copy"><Eyebrow>TMC PROJECTS / GENERAL CONTRACTING + PROJECT MANAGEMENT</Eyebrow><h1>Building Better.<br />Managing Smarter.</h1><p>The right-sized construction partner for projects that need clarity, coordination, and accountability.</p><div className="actions"><Link href="/contact" className="button button-light">Start a Project <span aria-hidden>→</span></Link><Link href="/projects" className="hero-link">View Our Work <span aria-hidden>↗</span></Link></div></div>
+    <div className="shell editorial-hero-copy"><Eyebrow>GENERAL CONTRACTING + PROJECT MANAGEMENT</Eyebrow><h1>Building Better.<br /><span className="hero-accent">Managing Smarter.</span></h1><p>The right-sized construction partner for projects that need clarity, coordination, and accountability.</p><div className="actions"><Link href="/contact" className="button button-light">Start a Project <span aria-hidden>→</span></Link><Link href="/projects" className="hero-link">View Our Work <span aria-hidden>→</span></Link></div></div>
   </section>
 
   <section className="section intro-statement"><div className="shell"><div className="section-marker">01 / POSITIONING</div><div className="statement-grid"><h2>Construction works better<br />when everyone is aligned.</h2><p>TMC brings planning, coordination, and execution under one accountable team.</p></div><div className="pillar-row">{[["Plan", "Clear scope before construction."], ["Manage", "One point of accountability."], ["Build", "Execution down to the details."]].map((item, i) => <article key={item[0]}><span>0{i + 1}</span><h3>{item[0]}</h3><p>{item[1]}</p></article>)}</div></div></section>
